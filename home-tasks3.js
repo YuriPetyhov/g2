@@ -43,8 +43,14 @@ for (let i = 0; i < 5; ++i) alert( i );
 
 
 //Задача 4
+//(вариант с if)
 for(let i = 1; i <= 10; i++) {
     if(i % 2 !== 0) continue;
+    console.log(i);
+}
+
+//(вариант через условие for)
+for(let i = 2; i <= 10; i += 2) {
     console.log(i);
 }
 
@@ -53,11 +59,11 @@ for(let i = 1; i <= 10; i++) {
 /* for (let i = 0; i < 3; i++) {
     alert( `number ${i}!` );
   } */
-  let i = 0;
-  while (i < 3) {
+let i = 0;
+while (i < 3) {
     alert( `number ${i}!` );
     i++;
-  }
+}
 
 
 //Задача 6
