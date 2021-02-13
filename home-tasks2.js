@@ -53,7 +53,7 @@ console.log(val15);
 
 //Задача 5
 let num = 10;
-if(num == 10) {
+if(num === 10) {
     console.log('Верно'); //выполнится
 } else {
     console.log('Неверно');
@@ -75,19 +75,21 @@ if(min >= 0 && min < 15) {
 let lang = 'en';
 let country;
 if(lang === 'ru') {
-    console.log(country = 'русский');
+    country = 'русский';
+    console.log(country);
 } else if (lang === 'en') {
-    console.log(country = 'английский');
+    country = 'английский';
+    console.log(country);
 }
 
 //Задача 7 вариант с switch
 let lang = 'ru';
 let country;
 switch (lang) {
-    case ('ru') :
+    case 'ru' :
         console.log(country = 'русский');
         break;
-    case ('en') :
+    case 'en' :
         console.log(country = 'английский');
         break;
 }

@@ -68,10 +68,10 @@ while (i < 3) {
 
 //Задача 6
 function calcCube(n) {
-    return n * n * n;
+    return Math.pow(n, 3);
 }
 let n = +prompt('Введите любое число');
-    alert(`Куб числа ${n} равен ${calcCube(n)}`);
+alert(`Куб числа ${n} равен ${calcCube(n)}`);
 
 
 //Задача 7
@@ -80,7 +80,7 @@ function calcSum(a, b) {
 }
 let a = +prompt('Введите первое число');
 let b = +prompt('Введите второе число');
-    alert(`Сумма чисел ${a} и ${b}  равна  ${calcSum(a, b)}`);
+alert(`Сумма чисел ${a} и ${b}  равна  ${calcSum(a, b)}`);
 
 
 //Задача 8 (вариант 1 - через swith)
@@ -118,12 +118,13 @@ showDay(num);
 
 //Задача 8 (вариант 2 - через массив)
 function showDay(num) {
-    let days = ['Вы должны ввести число в пределах от 1 до 7', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
-    let i = num;
-    if(i <= days.length) {
+    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+    const req = 'Вы должны ввести число в пределах от 1 до 7';
+    if(num <= days.length) {
+        let i = num - 1;
         alert(days[i]);
     } else {
-            alert(days[0]);
+        alert(req);
         }
     }
 let num = +prompt('Введите число от 1 до 7');
