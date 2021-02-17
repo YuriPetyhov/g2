@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use script';
+
+/*        Создайте пустой объект user.
+Добавьте свойство name со значением John.
+Добавьте свойство surname со значением Smith.
+Измените значение свойства name на Pete.
+Удалите свойство name из объекта.*/
+/*let obj = {};
+obj.name = 'John';
+obj.surname = 'Smith';
+console.log(obj);
+obj.name = 'Pete';
+console.log(obj);
+delete obj.name;
+console.log(obj);*/
+
+/*const user = {
+  name: "John"
+};
+
+// это будет работать?
+user.name = "Pete"; да так как  name записано не const не изменной будет ссылка user */
+
+let obj = {
+	a: 1
+}
+
+let newObj = obj;
+console.log(newObj);
+obj.a = 2;
+
+console.log(newObj.a); //2
+//сделайте так что бы obj.a = 2 не изменило newObj.a
+
+/*------------
+
+Создайте универсальный метод (this) который вы будете передавать в обьект и он будет выводить имя и фамилию */
+
+
+let user = {
+	name: 'Vasa',
+	surname: 'Petrov'
+};
+
+let user_2 = {
+	name: 'Kirill',
+	surname: 'Vasiliev'
+};
+
+// метод 
+
+user.hello = function() {
+    console.log(`Hello I am ${this.name}  ${this.surname}`);
+	
+};
+user_2.hello = function() {
+    console.log(`Hello I am ${this.name}  ${this.surname}`);
+	
+};
+
+
+
+
+
+user.hello(); // Должно вывести Vasa Petrov
+user_2.hello(); //  Должно вывести Kirill 'Vasiliev'*/
+  
+</script>
+</body>
+</html>
